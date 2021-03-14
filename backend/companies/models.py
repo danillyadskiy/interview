@@ -114,6 +114,10 @@ class Company(models.Model):
         on_delete=models.DO_NOTHING,
         help_text="Основной ОКВЭД"
     )
+    okved = models.ManyToManyField(
+        Okved,
+        related_name="okved_id"
+    )
 
     class Meta:
         verbose_name_plural = "companies"
