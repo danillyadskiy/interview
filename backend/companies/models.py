@@ -124,7 +124,9 @@ class Company(models.Model):
     )
     okved = models.ManyToManyField(
         Okved,
-        related_name="okved_id"
+        related_name="okved_id",
+        blank=True,
+        help_text="Не основной ОКВЭД"
     )
 
     class Meta:
