@@ -5,5 +5,6 @@ from companies.api import *
 router = routers.SimpleRouter(trailing_slash=False)
 
 router.register('region', RegionSet)
+router.register('company', CompanySet)
 
 urlpatterns = router.urls
