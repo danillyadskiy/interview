@@ -114,6 +114,14 @@ class Company(models.Model):
         on_delete=models.DO_NOTHING,
         help_text="Основной ОКВЭД"
     )
+    create_time = models.DateTimeField(
+        auto_now_add=True,
+        help_text="Дата создания"
+    )
+    update_time = models.DateTimeField(
+        auto_now=True,
+        help_text="Дата последнего изменения"
+    )
     okved = models.ManyToManyField(
         Okved,
         related_name="okved_id"
