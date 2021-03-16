@@ -11,7 +11,7 @@ const routes = [
   {
     path: '/companies',
     name: 'companies-search',
-    component: page('TestPage')
+    component: page('CompaniesPage')
   }
 ];
 
