@@ -7,6 +7,7 @@ from companies.serializers.okved import OkvedSerializer
 class CompanySerializer(serializers.ModelSerializer):
     region = serializers.ReadOnlyField(source='region.name')
     okopf = serializers.ReadOnlyField(source='okopf.name')
+    main_okved_name = serializers.ReadOnlyField(source='main_okved.name')
     okved = OkvedSerializer(read_only=True, many=True)
 
     class Meta:
@@ -21,5 +22,6 @@ class CompanySerializer(serializers.ModelSerializer):
             'region',
             'okopf',
             'main_okved',
+            'main_okved_name',
             'okved',
         )
