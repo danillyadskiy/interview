@@ -28,8 +28,8 @@
             >
               <v-expansion-panel-header>
                 <v-row>
-                  <v-col cols="4">{{ company.name }}</v-col>
-                  <v-col cols="8">{{ company.region }}</v-col>
+                  <v-col cols="4" v-html="highlight(company.name)"></v-col>
+                  <v-col cols="8" v-html="highlight(company.region)"></v-col>
                 </v-row>
               </v-expansion-panel-header>
               <v-expansion-panel-content>
@@ -145,6 +145,11 @@ export default {
       return arr.slice().sort(function(a, b) {
         return a.code - b.code;
       });
+    },
+    highlight(text) {
+      // Флаг 'g' - чувствительный к регистру
+      const check = new RegExp(this.keyWordSearch, 'g');
+      return text.replace(check,'<span class="highlighted">$&</span>');
     }
   }
 }
@@ -158,5 +163,8 @@ export default {
 }
 .okved {
   color: #9e9e9e;
+}
+::v-deep .highlighted {
+  color: #3575cf;
 }
 </style>
