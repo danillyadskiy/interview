@@ -108,6 +108,26 @@ class Company(models.Model):
         on_delete=models.DO_NOTHING,
         help_text="Организационно-правовая форма компании"
     )
+    main_okved = models.ForeignKey(
+        Okved,
+        null=True,
+        on_delete=models.DO_NOTHING,
+        help_text="Основной ОКВЭД"
+    )
+    create_time = models.DateTimeField(
+        auto_now_add=True,
+        help_text="Дата создания"
+    )
+    update_time = models.DateTimeField(
+        auto_now=True,
+        help_text="Дата последнего изменения"
+    )
+    okved = models.ManyToManyField(
+        Okved,
+        related_name="okved_id",
+        blank=True,
+        help_text="Не основной ОКВЭД"
+    )
 
     class Meta:
         verbose_name_plural = "companies"

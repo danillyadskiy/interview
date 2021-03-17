@@ -10,7 +10,11 @@
     "email": null,
     "link": null,
     "region": 77,
-    "okopf": 12247
+    "okopf": 12247,
+    "main_okved": null,
+    "create_time": "2021-03-15 11:20:53",
+    "update_time": "2021-03-15 11:20:54",
+    "okved": []
   }
 },
 {
@@ -24,7 +28,18 @@
     "email": "Zabolotnaya.Va@sberbank.ru",
     "link": "https://sberbank-university.ru/",
     "region": 77,
-    "okopf": 71400
+    "okopf": 71400,
+    "main_okved": "85.23",
+    "create_time": "2021-03-15 11:20:53",
+    "update_time": "2021-03-15 11:20:54",
+    "okved": [
+      "62.0",
+      "63.1",
+      "63.11.1",
+      "69",
+      "82.99",
+      "85.23"
+    ]
   }
 },
 {
@@ -38,7 +53,17 @@
     "email": "torgi@sberleasing.ru",
     "link": "http://www.sberleasing.ru",
     "region": 50,
-    "okopf": 12267
+    "okopf": 12267,
+    "main_okved": "64.91",
+    "create_time": "2021-03-15 11:20:53",
+    "update_time": "2021-03-15 11:20:54",
+    "okved": [
+      "64.91",
+      "64.92",
+      "66.19.4",
+      "70.22",
+      "77.11"
+    ]
   }
 },
 {
@@ -52,7 +77,20 @@
     "email": "nvm_99@mail.ru",
     "link": null,
     "region": 77,
-    "okopf": 12300
+    "okopf": 12300,
+    "main_okved": "65.12",
+    "create_time": "2021-03-15 11:20:53",
+    "update_time": "2021-03-15 11:20:54",
+    "okved": [
+      "62.01",
+      "63.11.1",
+      "65.12",
+      "65.20",
+      "66.19",
+      "66.29",
+      "68.20",
+      "70.10"
+    ]
   }
 },
 {
@@ -66,7 +104,13 @@
     "email": "ifilatov@mtsbank.ru",
     "link": "https://www.mtsbank.ru/",
     "region": 77,
-    "okopf": 12247
+    "okopf": 12247,
+    "main_okved": "64.19",
+    "create_time": "2021-03-15 11:20:53",
+    "update_time": "2021-03-15 11:20:54",
+    "okved": [
+      "64.19"
+    ]
   }
 }
 ]
