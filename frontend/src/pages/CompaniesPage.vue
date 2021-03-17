@@ -1,7 +1,7 @@
 <template>
   <v-container class="mt-5" >
       <v-row no-gutters>
-        <v-col cols="12" sm="1" md="1">
+        <v-col cols="1">
           <v-btn
               class="btn-search"
               text
@@ -10,7 +10,7 @@
             <v-icon>mdi-magnify</v-icon>
           </v-btn>
         </v-col>
-        <v-col cols="12" sm="10" md="10">
+        <v-col cols="10">
 
           <!-- Строка поиска -->
           <v-text-field
@@ -28,29 +28,29 @@
             >
               <v-expansion-panel-header>
                 <v-row>
-                  <v-col cols="4" v-html="highlight(company.name)"></v-col>
-                  <v-col cols="8" v-html="highlight(company.region)"></v-col>
+                  <v-col cols="12" md="4" v-html="highlight(company.name)"></v-col>
+                  <v-col cols="12" md="8" v-html="highlight(company.region)"></v-col>
                 </v-row>
               </v-expansion-panel-header>
               <v-expansion-panel-content>
                 <v-divider></v-divider>
                 <v-row class="mt-4" no-gutters >
-                  <v-col cols="4">
+                  <v-col cols="12" md="4">
                     <v-row align="center">
-                      <v-col cols="3">ИНН</v-col>
-                      <v-col cols="8">{{ company.inn }}</v-col>
+                      <v-col cols="12" sm="3">ИНН</v-col>
+                      <v-col cols="12" sm="8">{{ company.inn }}</v-col>
                     </v-row>
                     <v-row align="center">
-                      <v-col cols="3">КПП</v-col>
-                      <v-col cols="8">{{ company.kpp }}</v-col>
+                      <v-col cols="12" sm="3">КПП</v-col>
+                      <v-col cols="12" sm="8">{{ company.kpp }}</v-col>
                     </v-row>
                     <v-row align="center" v-if="company.registration_date">
-                      <v-col cols="3">дата регистрации</v-col>
-                      <v-col cols="8">{{ company.registration_date }}</v-col>
+                      <v-col cols="12" sm="3" md="11" xl="3">дата регистрации</v-col>
+                      <v-col cols="12" sm="8">{{ company.registration_date }}</v-col>
                     </v-row>
                     <v-row align="center">
-                      <v-col cols="3">ОКОПФ</v-col>
-                      <v-col cols="8">{{ company.okopf }}</v-col>
+                      <v-col cols="12" sm="3" md="11" xl="3">ОКОПФ</v-col>
+                      <v-col cols="12" sm="8" md="11" xl="8">{{ company.okopf }}</v-col>
                     </v-row>
                     <v-row align="center" no-gutters v-if="company.email">
                       <v-col cols="3">email</v-col>
@@ -73,13 +73,13 @@
                       </v-col>
                     </v-row>
                   </v-col>
-                  <v-col cols="8" v-if="company.main_okved">
+                  <v-col cols="12" md="8" v-if="company.main_okved">
                     <v-row align="center">
                       <v-col cols="1">ОКВЭД</v-col>
                     </v-row>
                     <v-row align="center" no-gutters>
-                      <v-col cols="1">{{ company.main_okved }}</v-col>
-                      <v-col cols="11">{{ company.main_okved_name }}</v-col>
+                      <v-col cols="12" md="2" xl="1">{{ company.main_okved }}</v-col>
+                      <v-col cols="12" md="10" xl="11">{{ company.main_okved_name }}</v-col>
                     </v-row>
                     <v-row
                         align="center"
@@ -88,8 +88,8 @@
                         v-for="okved in sortOkvedASC(company.okved)"
                         :key="okved.code"
                     >
-                      <v-col cols="1">{{ okved.code }}</v-col>
-                      <v-col cols="11">{{ okved.name }}</v-col>
+                      <v-col cols="12" md="2" xl="1">{{ okved.code }}</v-col>
+                      <v-col cols="12" md="10" xl="11">{{ okved.name }}</v-col>
                     </v-row>
                   </v-col>
                 </v-row>
@@ -103,7 +103,7 @@
           </div>
 
         </v-col>
-        <v-col cols="12" sm="1" md="1">
+        <v-col cols="1">
         </v-col>
       </v-row>
     </v-container>
