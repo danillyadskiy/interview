@@ -85,7 +85,7 @@
                         align="center"
                         no-gutters
                         class="okved"
-                        v-for="okved in company.okved"
+                        v-for="okved in sortOkvedASC(company.okved)"
                         :key="okved.code"
                     >
                       <v-col cols="1">{{ okved.code }}</v-col>
@@ -139,6 +139,12 @@ export default {
               this.isCompaniesEmpty = !response.data.length;
             });
       }
+    },
+    sortOkvedASC: function(arr) {
+      // Использован slice(), чтобы избежать бесконечного цикла
+      return arr.slice().sort(function(a, b) {
+        return a.code - b.code;
+      });
     }
   }
 }
